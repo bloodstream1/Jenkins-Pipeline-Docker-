@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     // Building Docker image
-                    bat "docker build -t myapp1:latest1 ."
+                    bat "docker build -t aakashtyagi11:latest1 ."
                 }
             }
         }
@@ -40,7 +40,7 @@ pipeline {
                 script {
                     // Push the Docker image to a registry
                     // Make sure to log in to your Docker registry somehow before this step
-                    bat "docker push myapp1:latest1"
+                    bat "docker push aakashtyagi11:latest1"
                 }
             }
         }

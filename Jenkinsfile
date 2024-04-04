@@ -19,8 +19,8 @@ pipeline {
             steps {
                 script {
                     // Restore, build, and publish using the .NET Core CLI
-                    bat "dotnet restore"
-                    bat "dotnet build --configuration Release"
+                    sh "dotnet restore"
+                    sh "dotnet build --configuration Release"
                     // sh 'dotnet publish -c Release -o ./publish'
                 }
             }
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 script {
                     // Building Docker image
-                    bat "docker build -t aakashtyagi11:latest1 ."
+                    sh "docker build -t aakashtyagi11:latest1 ."
                 }
             }
         }
@@ -48,7 +48,7 @@ pipeline {
                 script {
                     // Push the Docker image to a registry
                     // Make sure to log in to your Docker registry somehow before this step
-                    bat "docker push aakashtyagi11:latest1"
+                    sh "docker push aakashtyagi11:latest1"
                 }
             }
         }

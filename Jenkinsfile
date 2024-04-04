@@ -26,13 +26,13 @@ pipeline {
             }
         }
 
-        stage('Test Docker') {
-            steps {
-                script {
-                    bat 'docker --version'
-                }
-            }
-        }
+        // stage('Test Docker') {
+        //     steps {
+        //         script {
+        //             bat 'docker --version'
+        //         }
+        //     }
+        // }
 
         stage('Build Docker Image') {
             steps {

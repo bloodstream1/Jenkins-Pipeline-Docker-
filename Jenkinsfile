@@ -19,8 +19,8 @@ pipeline {
             steps {
                 script {
                     // Restore, build, and publish using the .NET Core CLI
-                    bat 'dotnet restore'
-                    bat 'dotnet build --configuration Release'
+                    bat "dotnet restore"
+                    bat "dotnet build --configuration Release"
                     // sh 'dotnet publish -c Release -o ./publish'
                 }
             }

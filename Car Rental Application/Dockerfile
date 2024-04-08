@@ -6,10 +6,10 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["Car Rental Application.csproj", "."]
-RUN dotnet restore "./Car Rental Application.csproj"
+COPY ["Car Rental Application/Car Rental Application.csproj", "Car Rental Application/"]
+RUN dotnet restore "Car Rental Application/Car Rental Application.csproj"
 COPY . .
-WORKDIR "/src/."
+WORKDIR "/src/Car Rental Application"
 RUN dotnet build "Car Rental Application.csproj" -c Release -o /app/build
 
 FROM build AS publish

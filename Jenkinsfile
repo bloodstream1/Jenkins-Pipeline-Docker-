@@ -38,7 +38,7 @@ pipeline {
             steps {
                 script {
                     // Building Docker image
-                    sh "docker build -t aakashtyagi11:latest1 ."
+                    sh "docker build -t car-image:latest1 ."
                 }
             }
         }

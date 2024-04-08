@@ -38,7 +38,7 @@ pipeline {
             steps {
                 script {
                     // Building Docker image
-                    sh 'docker build -t aakashtyagi11:latest1 -f "Car Rental Application/Dockerfile" .'
+                    sh 'docker build -t car-rental-image:latest -f "Car Rental Application/Dockerfile" .'
                 }
             }
         }
@@ -48,7 +48,8 @@ pipeline {
                 script {
                     // Push the Docker image to a registry
                     sh 'docker login -u aakashtyagi11 -p aakash123'
-                    sh "docker push aakashtyagi11/jenkins:latest1"
+                    sh 'docker tag  aakashtyagi11/latest'
+                    sh "docker push aakashtyagi11/jenkins:latest"
                 }
             }
         }

@@ -38,7 +38,7 @@ pipeline {
             steps {
                 script {
                     // Building Docker image
-                    sh "docker build -t car-image:latest1 -f Car Rental Application/Dockerfile ."
+                    sh "docker build -t car-image:latest1 -f "Car Rental Application/Dockerfile" ."
                 }
             }
         }

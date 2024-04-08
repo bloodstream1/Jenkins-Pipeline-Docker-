@@ -48,7 +48,7 @@ pipeline {
                 script {
                     // Push the Docker image to a registry
                     sh 'docker login -u aakashtyagi11 -p aakash123'
-                    sh "docker push aakashtyagi11/aakashtyagi11:latest1"
+                    sh "docker push aakashtyagi11/jenkins:latest1"
                 }
             }
         }

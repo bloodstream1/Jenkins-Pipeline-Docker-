@@ -47,7 +47,7 @@ pipeline {
             steps {
                 script {
                     // Push the Docker image to a registry
-                    // Make sure to log in to your Docker registry somehow before this step
+                    sh 'docker login -u aakashtyagi11 -p aakash123'
                     sh "docker push aakashtyagi11:latest1"
                 }
             }
